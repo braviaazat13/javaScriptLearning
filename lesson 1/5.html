@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+	'use strict';
+
+	let $1, $2, $3, $4, $5, $6, number, firstSumm, secondSumm;
+
+	number = prompt('Введите номер вашего билета(6 цифр)');
+
+	$1 = parseInt((number / 100000) % 10);
+	$2 = parseInt((number / 10000) % 10);
+	$3 = parseInt((number / 1000) % 10);
+	$4 = parseInt((number / 100) % 10);
+	$5 = parseInt((number / 10) % 10);
+	$6 = parseInt(number % 10);
+
+	firstSumm = $1 + $2 + $3;
+	secondSumm = $4 + $5 + $6;
+
+	if (firstSumm === secondSumm) {
+		alert('Поздравляем! У вас счатсливый билетик!');
+	}
+	else {
+		alert('Этот билетик не принеет счастья :c');
+	}
+
+</script>
