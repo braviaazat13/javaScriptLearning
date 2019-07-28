@@ -3,10 +3,16 @@
 <script>
 	'use strict';
 
-	let celsius = +prompt('Введите температуру по фаренгейту:');
-	let farenate;
+	function wrapper() {
+		let celsius = +prompt('Введите температуру по фаренгейту:');
+		let farenate;
 
-	farenate = (9 / 5) * celsius + 32;
-	alert(farenate);
+		farenate = (9 / 5) * celsius + 32;
+		farenate = Math.round(farenate);
+
+		alert('Градусов по Цельсию: ' + farenate);
+		wrapper();
+	}
+	wrapper();
 
 </script>
